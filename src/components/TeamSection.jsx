@@ -33,7 +33,7 @@ const teamMembers = [
 // Styled Components
 const TeamCard = styled(Card)(({ theme }) => ({
   background: 'white',
-  borderRadius: '15px',
+  borderRadius: '12px',
   overflow: 'hidden',
   transition: 'all 0.3s ease-in-out',
   cursor: 'pointer',
@@ -46,15 +46,15 @@ const TeamCard = styled(Card)(({ theme }) => ({
 
 const TeamImage = styled('img')({
   width: '100%',
-  height: '350px',
+  height: '250px',
   objectFit: 'cover',
   display: 'block'
 });
 
 const HeroSection = styled(Box)(({ theme }) => ({
   textAlign: 'center',
-  padding: theme.spacing(12, 0),
-  marginBottom: theme.spacing(8),
+  padding: theme.spacing(6, 0),
+  marginBottom: theme.spacing(4),
   background: 'linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%)'
 }));
 
@@ -63,17 +63,22 @@ const TeamSection = () => {
     <Box sx={{ backgroundColor: '#ffffff' }}>
       {/* Hero Section */}
       <HeroSection>
-        <Box sx={{ width: '100%', px: { xs: 2, sm: 4, md: 6, lg: 8 } }}>
+        <Box sx={{ 
+          width: '100%', 
+          maxWidth: '1200px',
+          mx: 'auto',
+          px: { xs: 2, sm: 4, md: 6, lg: 8 }
+        }}>
           <Typography 
             component="span" 
             sx={{ 
               color: 'primary.main',
-              fontSize: '1.125rem',
+              fontSize: '1rem',
               fontWeight: 600,
               textTransform: 'uppercase',
-              letterSpacing: '3px',
+              letterSpacing: '2px',
               display: 'block',
-              marginBottom: 3
+              marginBottom: 2
             }}
           >
             OUR TEAM MEMBER
@@ -83,9 +88,9 @@ const TeamSection = () => {
             component="h1"
             sx={{ 
               fontWeight: 700,
-              marginBottom: 4,
+              marginBottom: 2,
               color: '#2B2D42',
-              fontSize: { xs: '2.5rem', md: '3.5rem' }
+              fontSize: { xs: '2rem', md: '2.5rem' }
             }}
           >
             Our Experienced Team
@@ -94,10 +99,10 @@ const TeamSection = () => {
             variant="body1"
             sx={{ 
               color: 'text.secondary',
-              maxWidth: '800px',
+              maxWidth: '600px',
               margin: '0 auto',
-              lineHeight: 1.8,
-              fontSize: '1.125rem'
+              lineHeight: 1.6,
+              fontSize: '1rem'
             }}
           >
             EHR systems centralize patient information, allowing secure access and sharing of
@@ -107,8 +112,14 @@ const TeamSection = () => {
       </HeroSection>
 
       {/* Team Cards */}
-      <Box sx={{ width: '100%', px: { xs: 2, sm: 4, md: 6, lg: 8 }, pb: 12 }}>
-        <Grid container spacing={{ xs: 4, md: 6 }}>
+      <Box sx={{ 
+        width: '100%',
+        maxWidth: '1200px',
+        mx: 'auto',
+        px: { xs: 2, sm: 4, md: 6, lg: 8 },
+        pb: 6
+      }}>
+        <Grid container spacing={{ xs: 2, md: 4 }}>
           {teamMembers.map((member, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <TeamCard elevation={0}>
@@ -116,15 +127,15 @@ const TeamSection = () => {
                   src={member.image}
                   alt={member.name}
                 />
-                <CardContent sx={{ textAlign: 'center', py: 4 }}>
+                <CardContent sx={{ textAlign: 'center', py: 2 }}>
                   <Typography 
                     variant="h6" 
                     component="h2"
                     sx={{ 
-                      fontWeight: 700,
-                      marginBottom: 1.5,
+                      fontWeight: 600,
+                      marginBottom: 1,
                       color: '#2B2D42',
-                      fontSize: '1.25rem'
+                      fontSize: '1.1rem'
                     }}
                   >
                     {member.name}
@@ -133,9 +144,10 @@ const TeamSection = () => {
                     variant="subtitle2"
                     sx={{ 
                       color: 'primary.main',
-                      letterSpacing: '2px',
+                      letterSpacing: '1px',
                       textTransform: 'uppercase',
-                      fontWeight: 600
+                      fontWeight: 600,
+                      fontSize: '0.8rem'
                     }}
                   >
                     {member.role}
