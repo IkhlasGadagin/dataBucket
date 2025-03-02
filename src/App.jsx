@@ -41,10 +41,10 @@ function App() {
         bgcolor: '#f8f9fa'
       }}>
         <Header />
-        <Box component="main" sx={{ flex: 1 }}>
-          <TeamSection />
+        <Box component="main" >
+          <TeamSection sx={{ width: '100%' }}/>
         </Box>
-        <Footer />
+        <Footer sx={{ width: '100%' }} />
       </Box>
     </ThemeProvider>
   );
