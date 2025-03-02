@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import TeamSection from './components/TeamSection';
+import ServicesSection from './components/ServicesSection';
 import Footer from './components/Footer';
 import { Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
@@ -43,6 +44,7 @@ function App() {
         <Header />
         <Box component="main" >
           <TeamSection sx={{ width: '100%' }}/>
+          <ServicesSection sx={{ width: '100%' }}/>
         </Box>
         <Footer sx={{ width: '100%' }} />
       </Box>

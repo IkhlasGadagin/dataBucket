@@ -8,6 +8,8 @@ import PaymentIcon from '@mui/icons-material/Payment';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import logo from '../assets/Group 101281.png';
+
 
 // Styled Components
 const TopBar = styled(Box)(({ theme }) => ({
@@ -133,17 +135,7 @@ const Header = () => {
             gap: { xs: 2, md: 0 }
           }}>
             {/* Logo */}
-            <Typography 
-              variant="h5" 
-              component="div" 
-              sx={{ 
-                fontWeight: 'bold',
-                color: 'secondary.main'
-              }}
-            >
-              Logo
-            </Typography>
-
+            <img src={logo} alt="logo" />
             {/* Navigation */}
             <Box sx={{ 
               display: 'flex', 

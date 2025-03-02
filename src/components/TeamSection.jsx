@@ -1,28 +1,32 @@
 import React from 'react';
 import { Container, Typography, Grid, Card, CardContent, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import photo1 from '../assets/Rectangle 193.png';
+import photo2 from '../assets/Rectangle 193 (1).png';
+import photo3 from '../assets/Rectangle 193 (2).png';
+
 
 // Team member data
 const teamMembers = [
   {
     name: 'Wilson John',
     role: 'MARKETING LEAD',
-    image: '/team1.jpg'
+    image: photo1
   },
   {
     name: 'Bob Thomas',
     role: 'MARKETING LEAD',
-    image: '/team2.jpg'
+    image: photo2
   },
   {
     name: 'Bob Thomas',
     role: 'MARKETING LEAD',
-    image: '/team3.jpg'
+    image: photo3
   },
   {
     name: 'Bob Thomas',
     role: 'MARKETING LEAD',
-    image: '/team4.jpg'
+    image: photo1
   }
 ];
 
